@@ -12,7 +12,7 @@ import SocialLinks from "./SocialLinks";
 export default function ContactForm() {
   return (
     <Card
-      className="bg-gradient-to-b from-green-900/40 to-neutral-50/30 p-4 rounded-xl flex flex-col items-start"
+      className="bg-gradient-to-b from-green-900/40 to-neutral-50/30 p-4 rounded-xl flex flex-col items-start mt-3"
       color="transparent"
       shadow={false}
     >

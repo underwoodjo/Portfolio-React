@@ -18,7 +18,7 @@ const Home = () => {
       <div className="absolute top-1/4 w-full text-center text-white text-3xl>">
         <div className="flex flex-col justify-center items-center">
           <img
-            className="rounded-full object-cover object-center object-top h-72 w-72 me-auto ms-auto"
+            className="rounded-full object-cover object-center object-top h-64 w-64 me-auto ms-auto"
             height={10}
             src="./src/images/profilephoto.jpeg"
           />

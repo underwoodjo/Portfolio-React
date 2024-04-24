@@ -51,7 +51,15 @@ const Projects = () => {
       value: "collaborative projects",
       cards: [
         {
-          title: "My Plant Playbook",
+          title: "GitFitNotFat",
+          github: "",
+          href: "",
+          shortDescription: "",
+          image: "./src/images/gitfit.jpeg",
+          completed: "false",
+        },
+        {
+          title: "Destinary",
           github: "",
           href: "",
           shortDescription: "",
@@ -59,15 +67,7 @@ const Projects = () => {
           completed: "false",
         },
         {
-          title: "My Plant Playbook",
-          github: "",
-          href: "",
-          shortDescription: "",
-          image: "",
-          completed: "false",
-        },
-        {
-          title: "My Plant Playbook",
+          title: "Disclone",
           github: "",
           href: "",
           shortDescription: "",
@@ -78,11 +78,13 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="absolute left-0 right-0 grid place-items-center top-1/4">
-      <Tabs value="personal-projects">
-        <TabsHeader>
+    // <div className="absolute left-0 right-0 grid place-items-center top-1/4">
+      <Tabs className="absolute left-16 right-0 flex justify-center flex-wrap top-1/4"
+      value="personal-projects">
+        <TabsHeader className="bg-gradient-to-b from-green-900/40 to-neutral-50/30 p-2 mb-6 flex"
+        style={{width: "500px", height: "50px"}}>
           {data.map(({ label, value }) => (
-            <Tab className="hover:bg-green-900/40" key={value} value={value}>
+            <Tab className="hover:bg-green-900/40 rounded-lg" key={value} value={value}>
               {label}
             </Tab>
           ))}
@@ -90,14 +92,14 @@ const Projects = () => {
         <TabsBody className="grid grid-cols-1 gap-4">
           {data.map(({ value, cards }) => (
             <TabPanel
-              className="grid grid-cols-2 gap-4 md:grid-cols-3"
+              className="grid grid-cols-2 md:grid-cols-3 gap-4"
               key={value}
               value={value}
             >
               {cards.map((card, index) => (
                 <div className="" key={index}>
                   <Card
-                    className="bg-gradient-to-b from-green-900/40 to-neutral-50/30 p-4 rounded-xl h-52 w-52"
+                    className="bg-gradient-to-b from-green-900/40 to-neutral-50/30 p-4 rounded-xl h-60 w-56 text-center"
                     color="transparent"
                     shadow={false}
                   >
@@ -109,7 +111,7 @@ const Projects = () => {
           ))}
         </TabsBody>
       </Tabs>
-      {/* <Card
+      /* <Card
         className="bg-gradient-to-b from-green-900/40 to-neutral-50/30 p-4 rounded-xl h-52 w-52"
         color="transparent"
         shadow={false}
@@ -130,8 +132,8 @@ const Projects = () => {
         <CardBody className="flex flex-col"></CardBody>
       </Card>
       </Grid>
-      </Grid> */}
-    </div>
+      </Grid> */
+    // </div>
   );
 };
 
