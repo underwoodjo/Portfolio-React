@@ -5,15 +5,12 @@ import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
-
-
-
-const Main = () => {
+const Home = () => {
   return (
     <div id="main">
       {/* For the image we have it applied to the width of the full screen, as well as the height of the screen, we also set the object-cover so that the image is not stretched */}
       <img
-        className="w-full h-screen object-cover"
+        className="w-full h-screen object-cover relative"
         src="./src/images/forest.jpeg"
       />
       
@@ -28,9 +25,9 @@ const Main = () => {
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
-              "I'm a student",
+              "I'm a front-end developer",
               2000, // wait 2s before replacing Web Developer with focused in frontend development
-              "I'm a frontend developer",
+              "I'm a UX designer",
               2000,
             ]}
             wrapper="span"
@@ -49,4 +46,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;
