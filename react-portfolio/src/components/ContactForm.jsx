@@ -5,11 +5,12 @@ import {
     Button,
     Typography,
   } from "@material-tailwind/react";
-  import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
+  import { AiOutlineMail, AiOutlinePhone, } from "react-icons/ai";
+  import { FaGithub, FaLinkedin } from "react-icons/fa";
   export default function ContactForm() {
     return (
         <Card
-          className="bg-gradient-to-b from-green-900/40 to-neutral-50/40 p-4 rounded-xl"
+          className="bg-gradient-to-b from-green-900/40 to-neutral-50/30 p-4 rounded-xl"
           color="transparent"
           shadow={false}
         >
@@ -25,11 +26,16 @@ import {
               </AiOutlinePhone>
             804-837-7181
           </Typography>
+          <Typography className="flex pt-3 gap-3">
+            <FaGithub size={20}></FaGithub>
+            <FaLinkedin size={20}></FaLinkedin>
+          </Typography>
           
-          <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+          
+          {/* <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
             <div className="mb-1 flex flex-col gap-6">
             </div>
-          </form>
+          </form> */}
         </Card>
       
     );
