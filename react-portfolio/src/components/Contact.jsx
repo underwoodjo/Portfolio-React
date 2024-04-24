@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm"
 
 const Contact = () => {
   return (
-    <div className="absolute top-1/4 mt-6 left-1/4 right-1/4 item-center">
+    <div className="absolute top-1/4 mt-6 left-1/4 right-1/4 items-center">
       <ContactForm />
       <div id="contact"></div>
     </div>
