@@ -12,12 +12,12 @@ import SocialLinks from "./SocialLinks";
 export default function ContactForm() {
   return (
     <Card
-      className="bg-gradient-to-b from-green-900/40 to-neutral-50/30 p-4 rounded-xl flex flex-col items-start mt-3"
+      className="bg-gradient-to-b from-green-900/40 to-neutral-50/20 p-4 rounded-xl flex flex-col items-start mt-3"
       color="transparent"
       shadow={false}
     >
-      <CardBody className="flex flex-col ">
-        <Typography variant="h4" color="blue-gray">
+      <CardBody className="flex flex-col">
+        <Typography className="text-start" variant="h4" color="blue-gray">
           Contact Me:
         </Typography>
         <Typography

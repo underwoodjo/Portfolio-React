@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 export default {
   content: [
     "./index.html",
@@ -16,7 +18,11 @@ export default {
           50: '#FAFAF9'
         }
        
-      }
+      },
+      screens: {
+        'xs': '300px',
+        ...defaultTheme.screens,
+      },
     },
   },
   plugins: [],

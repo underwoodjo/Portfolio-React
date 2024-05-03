@@ -7,7 +7,7 @@ function App() {
       <Navbar />
       <img
         className="w-full h-screen object-cover"
-        src="./src/images/forest.jpeg"
+        src="/images/forest.jpeg"
       />
       <Outlet />
     </div>

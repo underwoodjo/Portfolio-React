@@ -13,6 +13,7 @@ import {
   CardBody,
   CardHeader,
 } from "@material-tailwind/react";
+import { TypeAnimation } from "react-type-animation";
 
 const Projects = () => {
   const data = [
@@ -55,7 +56,7 @@ const Projects = () => {
           github: "",
           href: "",
           shortDescription: "",
-          image: "./src/images/gitfit.jpeg",
+          image: "/images/gitfit.jpeg",
           completed: "false",
         },
         {
@@ -79,20 +80,36 @@ const Projects = () => {
   ];
   return (
     // <div className="absolute left-0 right-0 grid place-items-center top-1/4">
-      <Tabs className="absolute left-16 right-0 flex justify-center flex-wrap top-1/4"
-      value="personal-projects">
-        <TabsHeader className="bg-gradient-to-b from-green-900/40 to-neutral-50/30 p-2 mb-6 flex"
-        style={{width: "500px", height: "50px"}}>
+    <div className="absolute left-16 right-0 top-16 md:top-36  text-center">
+      <TypeAnimation
+        sequence={[
+          // Same substring at the start will only be typed out once, initially
+          "Welcome to my Portfolio!",
+          2000,
+        ]}
+        wrapper="span"
+        speed={50}
+        style={{ fontSize: "2em", display: "inline-block" }}
+      />
+      <Tabs className="flex justify-center flex-wrap" value="personal-projects">
+        <TabsHeader
+          className="bg-gradient-to-b from-green-900/40 to-neutral-50/30 p-2 mb-6 mt-6 flex xs:flex-col sm:flex-row"
+          style={{ width: "500px", height: "50px" }}
+        >
           {data.map(({ label, value }) => (
-            <Tab className="hover:bg-green-900/40 rounded-lg" key={value} value={value}>
+            <Tab
+              className="hover:bg-green-900/40 rounded-lg"
+              key={value}
+              value={value}
+            >
               {label}
             </Tab>
           ))}
         </TabsHeader>
-        <TabsBody className="grid grid-cols-1 gap-4">
+        <TabsBody className="flex gap-4">
           {data.map(({ value, cards }) => (
             <TabPanel
-              className="grid grid-cols-2 md:grid-cols-3 gap-4"
+              className="gap-4 flex flex-wrap justify-center"
               key={value}
               value={value}
             >
@@ -103,7 +120,10 @@ const Projects = () => {
                     color="transparent"
                     shadow={false}
                   >
-                    <CardBody>{card.title}</CardBody>
+                    <CardBody>
+                      {card.title}
+                      <img className="pt-2" src={card.image} />
+                    </CardBody>
                   </Card>
                 </div>
               ))}
@@ -111,29 +131,7 @@ const Projects = () => {
           ))}
         </TabsBody>
       </Tabs>
-      /* <Card
-        className="bg-gradient-to-b from-green-900/40 to-neutral-50/30 p-4 rounded-xl h-52 w-52"
-        color="transparent"
-        shadow={false}
-      >
-      </Card>
-      <Card
-        className="bg-gradient-to-b from-green-900/40 to-neutral-50/30 p-4 rounded-xl h-52 w-52"
-        color="transparent"
-        shadow={false}
-      >
-        <CardBody className="flex flex-col"></CardBody>
-      </Card>
-      <Card
-        className="bg-gradient-to-b from-green-900/40 to-neutral-50/30 p-4 rounded-xl h-52 w-52"
-        color="transparent"
-        shadow={false}
-      >
-        <CardBody className="flex flex-col"></CardBody>
-      </Card>
-      </Grid>
-      </Grid> */
-    // </div>
+      </div>
   );
 };
 

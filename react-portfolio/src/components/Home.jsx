@@ -20,13 +20,13 @@ const Home = () => {
           <img
             className="rounded-full object-cover object-center object-top h-64 w-64 me-auto ms-auto"
             height={10}
-            src="./src/images/profilephoto.jpeg"
+            src="/images/profilephoto.jpeg"
           />
-          <h1 className="text-3xl mt-6">Hi, I'm Joanna</h1>
+          <h1 className="text-5xl mt-6">Hi, I'm Joanna</h1>
           {/* <h2 className="text-2xl">
           I'm 
         </h2> */}
-          <h2 className="text-2xl">
+          <h2 className="text-2xl mt-2">
             {/* Here we are using the react-type-animation library to make the text move across the screen */}
             <TypeAnimation
               sequence={[
